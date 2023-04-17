@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { EColors } from "../../constants";
+import { IInput } from "@/interfaces/components.interface";
 
 export const Container = styled("div")`
   background-color: ${EColors.BACKGROUND};
@@ -16,7 +17,7 @@ export const Content = styled("div")`
   max-width: 1280px;
 `;
 
-export const Input = styled("input")`
+export const StyledInput = styled.input`
   background-color: transparent;
   outline: none !important;
   border: none !important;
@@ -44,15 +45,22 @@ export const InputContainer = styled("div")`
   label {
     padding: 10px 0 0 20px;
   }
+
+  .error {
+    color: red;
+    font-size: 14px;
+    padding: 0 0 5px 20px;
+  }
 `;
 
-export const Button = styled("div")`
+export const Button = styled.button`
   background-color: ${EColors.BUTTON};
   border: 0.5px solid transparent;
   color: ${EColors.BACKGROUND};
   font-size: 18px;
   font-weight: 500;
   display: block;
+  width: 100%;
   padding: 10px;
   transition: all 0.3s;
 
